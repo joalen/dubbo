@@ -30,7 +30,7 @@ jobs:
         mv new_pom.xml pom.xml
 
     - name: Build project with JDK 17
-      run: mvn test
+      run: mvn spotless:apply && mvn test
 
     - name: Upload JaCoCo reports
       uses: actions/upload-artifact@v3
